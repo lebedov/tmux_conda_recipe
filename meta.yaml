@@ -1,0 +1,25 @@
+{% set build = 0 %}
+{% set version = "2.1" %}
+
+package:
+    name: tmux
+    version: {{version}}
+
+about:
+    home: https://tmux.github.io
+    license: MIT
+    summary: terminal multiplexer
+
+source:
+    fn: tig-{{version}}.tar.gz
+    url: https://github.com/tmux/tmux/releases/download/{{version}}/tmux-{{version}}.tar.gz
+    md5: 74a2855695bccb51b6e301383ad4818c
+
+requirements:
+    build:
+        - libevent >=2.0
+    run:
+        - libevent >=2.0
+
+build:
+    number: {{build}}
